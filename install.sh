@@ -111,9 +111,17 @@ EOF
 
 chmod +x run.py
 
-echo "[4/5] Установка зависимостей Python..."
+echo "[4/7] Создание и активация виртуального окружения..."
+python3 -m venv venv
+source venv/bin/activate
+
+echo "[5/7] Установка зависимостей Python..."
+pip install --upgrade pip
+pip install -r requirements.txt
+
+echo "[6/7] Установка зависимостей Python..."
 pip3 install --upgrade pip
 pip3 install ccxt pandas
 
-echo "[5/5] Установка завершена!"
+echo "[7/7] Установка завершена!"
 echo "Запуск: cd \"$PROJECT_DIR\" && ./run.py"
