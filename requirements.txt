@@ -1,0 +1,6 @@
+requests
+python-binance
+ccxt
+pandas
+aiohttp
+websockets
